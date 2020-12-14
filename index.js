@@ -90,13 +90,12 @@ function finalScore(inning,inningsPlayed){
   let home=0;
   let away=0;
   let innings=0;
-  if (innings<inningsPlayed){
-    ++innings;
-    home+=inning;
-    away+=inning;
+  for (let i=0;i<inningsPlayed;i++) {
+    home+=inning();
+    away+=inning();
+    innings++;
   }
-  return `Away: ${away}`;
-  return `home: ${home}`;
+  return `Home: ${home} Away: ${away}`
 }
 finalScore(inning,9);
 
