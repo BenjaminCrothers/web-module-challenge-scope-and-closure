@@ -105,8 +105,8 @@ Use the getInningScore() function below to do the following:
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
   function getInningScore(callback) {
-    inningScore = {};
-    getScore = function(){
+    let inningScore = {};
+    let getScore = function(){
       inningScore.home = callback();
       inningScore.away = callback();
       console.log(inningScore);
