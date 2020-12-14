@@ -43,6 +43,8 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+  Closure is how variables can be accessed. Closure is like hereditary selfishness that increases with each generation, where each child demands access to its parents but refuses to share upwards. Functions refuse to share any nested variables outside of themselves, while block-level scoped things will not share const and var to things outside of themselves. All things share with their children.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +66,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+  Closure is used inside both funtions, both having performing actions that are contained by opening and closing brackets.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+  The console will always display the string under the return's console.log, with changing name and role, the role being random and the name changing by which name is used in the invocation.
+
 c. What is the lexical scope of `newRoll`? 
+  The lexical scope is internal-newRole does not reach outside of its parent function.
 
 
 ### Task 3 - Stretch Goals
