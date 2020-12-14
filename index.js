@@ -66,8 +66,7 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning(){
-  let max = 3;
-  let score = Math.floor(Math.random()*Math.floor(max));
+  let score = Math.floor(Math.random()*3);
   return score;
 }
 inning();
@@ -87,9 +86,19 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(inning,inningsPlayed){
+  let home=0;
+  let away=0;
+  let innings=0;
+  if (innings<inningsPlayed){
+    ++innings;
+    home+=inning;
+    away+=inning;
+  }
+  return `Away: ${away}`;
+  return `home: ${home}`;
 }
+finalScore(inning,9);
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
