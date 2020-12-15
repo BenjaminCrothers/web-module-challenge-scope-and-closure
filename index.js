@@ -87,6 +87,7 @@ Use the finalScore function below to do the following:
 */ 
 
 function finalScore(inning,inningsPlayed){
+  const scoreObject = [];
   let home=0;
   let away=0;
   let innings=0;
@@ -95,7 +96,9 @@ function finalScore(inning,inningsPlayed){
     away+=inning();
     innings++;
   }
-  return `Home: ${home} Away: ${away}`
+  scoreObject["Away"]=away;
+  scoreObject["Home"]=home;
+  return scoreObject;
 }
 finalScore(inning,9);
 
